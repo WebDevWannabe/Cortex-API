@@ -21,7 +21,7 @@ body {
 
 #con {
     margin-top: 80px;
-    background-color: white;
+    background-color: #f2f2f2;
 }
 
 #con h1 {
@@ -30,6 +30,7 @@ body {
     font-size: 42px;
     font-weight: 400;
     line-height: 48px;
+    color: teal;
 }
 
 #con p {
@@ -60,6 +61,7 @@ body {
     font-size: 32px;
     font-weight: 400;
     line-height: 48px;
+    color: teal;
 }
 
 #con2 p {
@@ -103,6 +105,38 @@ body {
     margin-bottom: 50px;
 }
 
+#progressbarCon {
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
+
+#progressbarText {
+    margin-top: 50px;
+    margin-left: 20px;
+    font-size: 24px;
+    color: teal;
+}
+
+.disableClassifyBtn {
+    pointer-events: none;
+    cursor: default;
+}
+
+.opacityClassifyImg {
+    opacity: .5;
+}
+
+.disableFileChooserBtn {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+#con2 .result {
+    margin-top: 0px;
+}
+
 #con2 .result img {
     margin-top: 30px;
     width: 100%;
@@ -143,6 +177,15 @@ body {
 
 #con2 .result .resultPanel .panel2 .progress-bar-custom {
     background: rgba(0, 128, 128, 1);
+}
+
+#con2 #trainBtn {
+    margin-top: 40px;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 80px;
+    color: white;
+    margin-bottom: 70px;
 }
 
 #con3 {
