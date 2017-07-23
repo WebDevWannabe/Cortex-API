@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Cortex</title>
     <!--/*/ <th:block th:include="fragments/head-fragment :: head-fragment"></th:block> /*/-->
@@ -55,27 +55,27 @@
 
                 <div class="row firstRow">
                     <div class="col-sm-3">
-                        <a href="#"><img class="img-responsive w3-hover-shadow" src="images/dog.jpg" /></a>
+                        <a class="classifyBtn"><img class="img-responsive w3-hover-shadow classifyImg" src="images/dog.jpg" /></a>
                     </div>
                     <div class="col-sm-3">
-                        <a href="#"><img class="img-responsive w3-hover-shadow" src="images/dog.jpg" /></a>
+                        <a class="classifyBtn"><img class="img-responsive w3-hover-shadow classifyImg" src="images/dog.jpg" /></a>
                     </div>
                     <div class="col-sm-3">
-                        <a href="#"><img class="img-responsive w3-hover-shadow" src="images/dog.jpg" /></a>
+                        <a class="classifyBtn"><img class="img-responsive w3-hover-shadow classifyImg" src="images/dog.jpg" /></a>
                     </div>
                     <div class="col-sm-3">
-                        <a href="#"><img class="img-responsive w3-hover-shadow" src="images/dog.jpg" /></a>
+                        <a class="classifyBtn"><img class="img-responsive w3-hover-shadow classifyImg" src="images/dog.jpg" /></a>
                     </div>
                 </div>
                 <div class="row secondRow">
                     <div class="col-sm-3">
-                        <a href="#"><img class="img-responsive w3-hover-shadow" src="images/dog.jpg" /></a>
+                        <a class="classifyBtn"><img class="img-responsive w3-hover-shadow classifyImg" src="images/dog.jpg" /></a>
                     </div>
                     <div class="col-sm-3">
-                        <a href="#"><img class="img-responsive w3-hover-shadow" src="images/dog.jpg" /></a>
+                        <a class="classifyBtn"><img class="img-responsive w3-hover-shadow classifyImg" src="images/dog.jpg" /></a>
                     </div>
                     <div class="col-sm-3">
-                        <a href="#"><img class="img-responsive w3-hover-shadow" src="images/dog.jpg" /></a>
+                        <a class="classifyBtn"><img class="img-responsive w3-hover-shadow classifyImg" src="images/dog.jpg" /></a>
                     </div>
                     <div class="col-sm-3">
                         <input id="fileInput" type="file" style="display:none;" />
@@ -84,9 +84,19 @@
                 </div>
                 <input class="url" type="text" placeholder="Or paste an image url" />
 
+                <!-- Progress bar -->
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <div id="progressbarCon"></div>
+                        <p id="progressbarText">Cortex is classifying the image...</p>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div><br />
+
                 <!-- Output -->
                 <div class="result">
-                    <h2>Cortex sees...</h2>
+                    <h1>Cortex sees...</h1>
                     <div class="row">
                         <div class="col-sm-2"></div>
                         <div class="col-sm-8">
@@ -156,6 +166,14 @@
                                 </div>
                                 <div class="col-sm-2"></div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-sm-5"></div>
+                                <div class="col-sm-2">
+                                    <button id="trainBtn" class="w3-btn w3-teal w3-round">Classify again</button>
+                                </div>
+                                <div class="col-sm-5"></div>
+                            </div>
                         </div>
                         <div class="col-sm-2"></div>
                     </div>
@@ -166,7 +184,7 @@
         </div>
     </div>
     <div class="train tab-pane fade">
-        <p>Another Test</p>
+        <p>Put notice here. ("To use the train and other features of Cortex, you must sign in first etc etc...)</p>
     </div>
 </div>
 
@@ -187,6 +205,7 @@
 <!--/*/ <th:block th:include="fragments/footer-fragment :: footer-fragment"></th:block> /*/-->
 
 <!--/*/ <th:block th:include="fragments/scripts-fragment :: scripts-fragment"></th:block> /*/-->
+<script type="text/javascript" src="scripts/progressbar.js"></script>
 <script type="text/javascript" src="scripts/try-it.js"></script>
 </body>
 </html>
